@@ -1,0 +1,55 @@
+<body>
+  <br>
+  <div class="backbt">
+  <button class="btn btn-secondary" style="margin-left: 85%;" [routerLink]="['/dashboard-page']">BACK</button><br></div>
+  <form>
+
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </form>
+  <table class="table table-striped">
+    <div class="container custom-container">
+      <div class="col-md-9">
+        <h3 class="r"><strong>Add Transaction</strong></h3>
+        <div class="cnt">
+          <div class="form-group">
+            <input type="text" [(ngModel)]="transaction.transactionId" class="form-control"
+              placeholder="enter transactionId">
+          </div><br>
+
+          <div class="form-group">
+            <input type="text" [(ngModel)]="transaction.fromAccountId" class="form-control"
+              placeholder=" fromAccountId">
+          </div>
+          <br>
+
+          <div class="form-group">
+            <input type="text" [(ngModel)]="transaction.transactionType" class="form-control"
+              placeholder="transactionType">
+          </div><br>
+
+          <div class="form-group">
+            <input type="text" [(ngModel)]="transaction.toAccountId" class="form-control" placeholder="toAccountId">
+          </div><br>
+
+          <div class="form-group">
+            <input type="text" [(ngModel)]="transaction.amount" class="form-control" placeholder="amount">
+          </div><br>
+
+          <div class="form-group">
+            <input type="text" [(ngModel)]="transaction.userId" class="form-control" placeholder="userId">
+          </div>
+        </div>
+          <div class="but">
+            <button class="btn btn-success" (click)="newTransaction(transaction)"
+              [routerLink]="['/transaction-view']">Add Transaction</button>
+          </div><br>
+
+      </div>
+    </div>
+  </table>
+</body>

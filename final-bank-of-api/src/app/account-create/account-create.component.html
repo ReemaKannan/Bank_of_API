@@ -1,0 +1,31 @@
+<body>
+  <div class="container custom-container"><br>
+    <button class="btn btn-secondary" [routerLink]="['/dashboard-page']" style="margin-left:95%;">BACK</button><br>
+
+    <div class="col-md-12">
+            <h1 class="mb-3 text-center"><strong>CREATE ACCOUNT</strong></h1><br>
+      <div class="form-group">
+        <input type="text" [(ngModel)]="accountDetails.accountId" class="form-control" placeholder="Enter Account Id">
+      </div><br>
+      <div class="form-group">
+        <input type="text" [(ngModel)]="accountDetails.accountType" class="form-control"
+          placeholder="E nter Account Type">
+      </div><br>
+      <div class="form-group">
+        <input type="text" [(ngModel)]="accountDetails.accountBalance" class="form-control"
+          placeholder="Enter Account Balance">
+      </div><br>
+      <div class="form-group">
+        <input type="password" [(ngModel)]="accountDetails.secretePassword" class="form-control"
+          placeholder="Enter Secrete Password">
+      </div><br>
+      <div class="form-group">
+        <input type="text" [(ngModel)]="accountDetails.userId" class="form-control" placeholder="Enter UserId">
+      </div><br>
+      <div class="form-group">
+        <button class="btn btn-success btn-lg btn-block" 
+        (click)="addAccount(accountDetails)" [routerLink]="['/account-list']">Create Account</button>
+      </div>
+    </div>
+  </div>
+</body>

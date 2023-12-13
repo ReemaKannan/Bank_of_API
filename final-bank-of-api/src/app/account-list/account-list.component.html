@@ -1,0 +1,35 @@
+<body><br>
+  <div class="form-group">
+    <button class="btn btn-success" (click)="displayAccount()">Display Account</button>&nbsp;
+    <button class="btn btn-secondary" style="margin-left: 73%;" [routerLink]="['/dashboard-page']">BACK</button><br>
+
+  </div>
+
+  <!-- Account list table, it hides when there is no account -->
+  <div *ngIf="Account.length !== 0">
+    <h1 class="mb-3 text-center"><strong>Account List</strong></h1>
+
+    <div class="col-md-6" style="margin-left:25%;">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col">Account Id</th>
+            <th scope="col">Account Type</th>
+            <th scope="col">Account Balance</th>
+            <th scope="col">Secrete Password</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let account of Account">
+            <td>{{ account.accountId }}</td>
+            <td>{{ account.accountType }}</td>
+            <td>{{ account.accountBalance }}</td>
+            <td>{{ account.secretePassword }}</td>
+          </tr>
+        </tbody>
+      </table>
+  </div>
+</div>
+
+</body>

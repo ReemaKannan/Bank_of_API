@@ -1,0 +1,41 @@
+<body>
+  <div class="background-img">  
+    <img src="./../../assets/reg.jpeg" style="width:1400px;height:600px">
+<div class="container" style="max-width:500px;">
+  <br>
+  <h2 class="textual">User Registration </h2><br>
+    <form #registerform="ngForm" (ngSubmit)="registerUser()" >
+      <small class="text-danger">{{msg}}</small>
+      <div class="form-group">
+        <label for="text">UserName:</label>
+        <input type="text" class="form-control" placeholder="Enter name" name="userName"
+        [(ngModel)]="user.userName" required #userName="ngModel" [class.is-invalid]="userName.invalid &&
+        userName.touched">
+        <small class="text-danger" [class.d-none]="userName.valid ||
+        userName.untouched">Username is required field</small>
+      </div><br>
+      <div class="form-group">
+        <label for="pwd">UserPassword:</label>
+        <input type="password" class="form-control" placeholder="Enter password" name="userPassword"
+        [(ngModel)]="user.userPassword" required #userPassword="ngModel" [class.is-invalid]="userPassword.invalid &&
+        userPassword.touched">
+        <small class="text-danger" [class.d-none]="userPassword.valid ||
+        userPassword.untouched">Userpassword is required field</small>
+      </div><br>
+      <div class="form-group">
+        <label for="text">Address:</label>
+        <input type="text" class="form-control" placeholder="Enter Address" name="address"
+        [(ngModel)]="user.address" required #address="ngModel" [class.is-invalid]="address.invalid &&
+        address.touched">
+        <small class="text-danger" [class.d-none]="address.valid ||
+        address.untouched">Address is required field</small>
+      </div><br>
+      <button [disabled]="registerform.form.invalid" type="submit" class="btn btn-primary">REGISTER</button>
+
+    </form>
+    <small style="float:right;color:white;" [routerLink]="['/login-page']"><strong>Existing user ? Login here</strong></small>
+
+</div>
+  </div>
+ </body> 
+  

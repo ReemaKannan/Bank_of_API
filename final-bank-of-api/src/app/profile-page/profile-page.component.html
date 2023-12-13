@@ -1,0 +1,49 @@
+<body>
+  <div class="background-img">  
+    <img src="./../../assets/bg.jpeg" style="width:1400px;height:600px">
+      <div class="container">
+        <button class="btn btn-success" (click)="display()" style="margin-right: px;">Display Details</button> &nbsp;
+        <a href="./../account-list" class="btn btn-primary" >View Account</a>&nbsp;
+        <a href="./../transaction-view" class="btn btn-dark" >View Transaction</a>&nbsp;
+        <a href="./../dashboard-page" class="btn btn-secondary" style="margin-left: 50%;">BACK</a>
+        <form #updateform="ngForm" (ngSubmit)="editUser()">
+          
+          <div class="form-group "><br>
+            <h1><strong>USER DETAILS</strong></h1>
+            <label for="text">UserId</label>
+            <input type="text" class="form-control" placeholder="Enter UserId " name="userId"
+            [(ngModel)]="users.userId" required #userId="ngModel"  >
+          </div><br>
+          <div class="form-group">
+            <label for="text">UserName</label>
+            <input type="text" class="form-control" placeholder="Enter UserName " name="userName"
+            [(ngModel)]="users.userName" required #userName="ngModel"  >
+          </div><br>
+          <div class="form-group">
+            <label for="text">UserPassword</label>
+            <input type="text" class="form-control" placeholder="Enter UserPassword " name="userPassword"
+            [(ngModel)]="users.userPassword" required #userPassword="ngModel"  >
+          </div><br>
+          <div class="form-group">
+            <label for="text">UserAddress</label>
+            <input type="text" class="form-control" placeholder="Enter UserId " name="address"
+            [(ngModel)]="users.address" required #address="ngModel"  ><br>
+          
+          <button value="Update" type="submit" class="btn btn-primary" >Update</button></div>
+        </form>
+    </div>
+
+<table class="table mt-3">
+  
+  <tbody>
+    <tr *ngFor="let users of user">
+      <td>{{users.userId}}</td>
+      <td>{{users.userName}}</td>
+      <td>{{users.address}}</td>
+      <td><button type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="Edit(users)">Edit</button></td>
+       
+    </tr>
+  </tbody>
+</table>
+</div>
+</body>

@@ -1,0 +1,36 @@
+body {
+  background: #FF5F6D;
+  background: -webkit-linear-gradient(to right, #FF5F6D, #FFC371);
+  background: linear-gradient(to right, #FF5F6D, #FFC371);
+  min-height: 100vh;
+}
+.card {
+  display: flex;
+  flex-direction: row;
+  width: 70%;
+  margin-left: 15%;
+  margin-top: 5%;
+  
+  .card1{
+    margin-left: 130px;
+    margin-top: 90px;
+  }
+  .card2{
+    margin-left: 100px;
+    margin-top: 100px;
+  }
+  .card3{
+    margin-left: 90px;
+    margin-top: 100px;
+
+  }
+}
+body {
+  background: #8b80e9;
+  background: -webkit-linear-gradient(to right, #8b80e9, #e8e6f0);
+  background: linear-gradient(to right, #8b80e9, #e8e6f0);
+  height: 100%;
+}
+.dashboard-heading{
+  text-align: center;
+}

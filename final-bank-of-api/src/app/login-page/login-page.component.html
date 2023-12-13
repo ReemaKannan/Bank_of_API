@@ -1,0 +1,32 @@
+<body>
+  <div class="background-img">  
+  <img src="./../../assets/login.jpeg">
+<div class="container" style="max-width:600px;">
+  <br><h2>User Login </h2><br>
+  <form #loginform="ngForm" (ngSubmit)="loginUser()">
+    <small class="text-danger">{{msg}}</small>
+    <div class="form-group">
+      <label for="text">UserId:</label>
+      <input type="text" class="form-control" placeholder="Enter Id" name="userName"
+      [(ngModel)]="user.userId" required #userId="ngModel" [class.is-invalid]="userId.invalid &&
+      userId.touched">
+      <small class="text-danger" [class.d-none]="userId.valid ||
+      userId.untouched">Userid is required field</small>
+    </div><br>
+    <div class="form-group">
+      <label for="pwd">UserPassword:</label>
+      <input type="password" class="form-control" placeholder="Enter password" name="userPassword"
+      [(ngModel)]="user.userPassword" required #userPassword="ngModel" [class.is-invalid]="userPassword.invalid &&
+      userPassword.touched">
+      <small class="text-danger" [class.d-none]="userPassword.valid ||
+      userPassword.untouched">Userpassword is required field</small><br>
+      <button [disabled]="loginform.form.invalid" type="submit" class="btn btn-primary">LOGIN</button>
+    </div>
+  </form>
+  <small class="new" style="float:right;" (click)="gotoregistration()"><strong>New user ? Register 
+    here</strong></small>
+
+
+</div>
+</div>
+</body>
